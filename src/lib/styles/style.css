@@ -287,7 +287,7 @@ body {
 .todo-list li .icon-edit {
 	position: absolute;
 	top: 0;
-	bottom: -1px;
+	bottom: 0px;
 	font-size: 19px;
 	right: 45px;
 }
@@ -379,6 +379,7 @@ body {
 	margin: 3px;
 	padding: 3px 7px;
 	text-decoration: none;
+	text-transform: capitalize;
 	border: 1px solid transparent;
 	border-radius: 3px;
 }
