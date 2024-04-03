@@ -12,6 +12,11 @@
     });
   }
 
+  function removeTodo() {
+    const filteredTodos = $todos.filter((item) => item.id !== todo.id);
+    $todos = [...filteredTodos];
+  }
+
   function handleComplete() {
     $todos = toggleProp($todos, todo.id, 'completed');
   }
@@ -24,7 +29,7 @@
       <span class="title">{todo.title}</span>
     </label>
     <button class="icon icon-edit" type="button" aria-label="edit" />
-    <button class="icon icon-destroy" type="button" aria-label="delete" />
+    <button on:click={removeTodo} class="icon icon-destroy" type="button" aria-label="delete" />
   </div>
   <form>
     <input type="text" class="edit" />
