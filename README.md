@@ -2,7 +2,6 @@
 
 [sveltekit-todo-app](https://abcdato.github.io/sveltekit-todo-app/)
 
-
 ## Run app locally
 
 Once you've cloned a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
