@@ -1,6 +1,6 @@
 ## SvelteKit Todo App Demo
 
-[sveltekit-todo-app](abcdato.github.io/sveltekit-todo-app/)
+[sveltekit-todo-app](https://abcdato.github.io/sveltekit-todo-app/)
 
 
 ## Run app locally
