@@ -1,11 +1,20 @@
 <script>
   import TodoFilter from './TodoFilter.svelte';
+  import { todos } from '../stores/store';
 
-  let itemsLeft = 0;
+  $: itemsLeft = $todos.filter((todo) => !todo.completed).length;
+
+  const clearCompleted = () => {
+    const incompletedTodos = $todos.filter((todo) => !todo.completed);
+    $todos = [...incompletedTodos];
+  };
 </script>
 
 <footer class="footer">
-  <span class="todo-count">{itemsLeft} items left</span>
+  <span class="todo-count">
+    {itemsLeft}
+    {itemsLeft === 1 ? 'item' : 'items'} left
+  </span>
   <TodoFilter />
-  <button class="clear-completed" type="button">Clear completed</button>
+  <button on:click={clearCompleted} class="clear-completed" type="button">Clear completed</button>
 </footer>
