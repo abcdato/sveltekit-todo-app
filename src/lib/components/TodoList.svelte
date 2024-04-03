@@ -1,12 +1,12 @@
 <script>
-  import { todos } from '../stores/store';
+  import { todos, filteredTodos } from '../stores/store';
   import Todo from './Todo.svelte';
 </script>
 
 {#if $todos.length > 0}
   <main class="main">
     <ul class="todo-list">
-      {#each $todos as todo}
+      {#each $filteredTodos as todo}
         <Todo {todo} />
       {/each}
     </ul>

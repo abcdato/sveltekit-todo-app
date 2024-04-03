@@ -2,8 +2,6 @@
   import { v4 as uuidv4 } from 'uuid';
   import { todos } from '../stores/store';
 
-  $: console.log($todos);
-
   function createTodo(text) {
     return {
       id: uuidv4(),
