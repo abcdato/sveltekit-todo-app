@@ -1,10 +1,25 @@
 <script>
+  import { todos } from '../stores/store';
+
   export let todo;
+
+  function toggleProp(arr, id, propName) {
+    return arr.map((el) => {
+      if (el.id === id) {
+        return { ...el, [propName]: !el[propName] };
+      }
+      return el;
+    });
+  }
+
+  function handleComplete() {
+    $todos = toggleProp($todos, todo.id, 'completed');
+  }
 </script>
 
 <li class:editing={todo.editing} class:completed={todo.completed}>
   <div class="view">
-    <input class="toggle" type="checkbox" checked={todo.completed} />
+    <input on:click={handleComplete} class="toggle" type="checkbox" checked={todo.completed} />
     <label for="">
       <span class="title">{todo.title}</span>
     </label>
