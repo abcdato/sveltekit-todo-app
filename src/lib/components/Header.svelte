@@ -1,10 +1,10 @@
 <script>
-  import TodoForm from './TodoForm.svelte';
+  import AddTodoForm from './AddTodoForm.svelte';
 </script>
 
 <div>
   <h1>todos</h1>
   <header class="header">
-    <TodoForm />
+    <AddTodoForm />
   </header>
 </div>
